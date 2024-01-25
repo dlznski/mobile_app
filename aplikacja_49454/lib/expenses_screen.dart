@@ -1,10 +1,12 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'transaction.dart';
 import 'transaction_repository.dart';
 import 'database_helper.dart';
 
 class ExpensesScreen extends StatefulWidget {
-  const ExpensesScreen({Key? key}) : super(key: key);
+  const ExpensesScreen({super.key});
 
   @override
   _ExpensesScreenState createState() => _ExpensesScreenState();

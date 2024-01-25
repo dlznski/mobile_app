@@ -1,10 +1,12 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'expenses_screen.dart';
 import 'history_screen.dart';
 import 'database_helper.dart';
 
 class BudgetScreen extends StatefulWidget {
-  const BudgetScreen({Key? key}) : super(key: key);
+  const BudgetScreen({super.key});
 
   @override
   _BudgetScreenState createState() => _BudgetScreenState();

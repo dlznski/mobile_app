@@ -1,10 +1,12 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'transaction.dart';
 import 'transaction_repository.dart';
 import 'database_helper.dart';
 
 class HistoryScreen extends StatefulWidget {
-  const HistoryScreen({Key? key}) : super(key: key);
+  const HistoryScreen({super.key});
 
   @override
   _HistoryScreenState createState() => _HistoryScreenState();
@@ -66,7 +68,12 @@ class _HistoryScreenState extends State<HistoryScreen> {
                 ),
                 Column(
                   children: [
-                    Text('Aktualny budżet: ${_currentBudget.toStringAsFixed(2)}'),
+                    // Zaktualizowany fragment kodu
+                    Text(
+                      _currentBudget < 0
+                          ? 'Budżet przekroczono o ${(_currentBudget * -1).toStringAsFixed(2)}'
+                          : 'Aktualny budżet: ${_currentBudget.toStringAsFixed(2)}',
+                    ),
                     ElevatedButton(
                       onPressed: () async {
                         await _clearHistoryAndBudget();

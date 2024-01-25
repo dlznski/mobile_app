@@ -1,3 +1,5 @@
+// ignore_for_file: library_prefixes
+
 import 'package:sqflite/sqflite.dart';
 import 'database_helper.dart' as dbHelper;
 import 'transaction.dart' as app_transaction;
