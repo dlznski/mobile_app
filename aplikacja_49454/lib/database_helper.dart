@@ -13,7 +13,7 @@ class DatabaseHelper {
 
   Future<Database> initDatabase() async {
     String path = join(await getDatabasesPath(), 'finance.db');
-    return await openDatabase(path, version: 3, onCreate: createTables);
+    return await openDatabase(path, version: 1, onCreate: createTables);
   }
 
   Future<void> createTables(Database db, int version) async {
