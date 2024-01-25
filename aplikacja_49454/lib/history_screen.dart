@@ -68,7 +68,6 @@ class _HistoryScreenState extends State<HistoryScreen> {
                 ),
                 Column(
                   children: [
-                    // Zaktualizowany fragment kodu
                     Text(
                       _currentBudget < 0
                           ? 'Budżet przekroczono o ${(_currentBudget * -1).toStringAsFixed(2)}'
